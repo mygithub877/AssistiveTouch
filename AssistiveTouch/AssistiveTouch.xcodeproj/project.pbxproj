@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DA46D441BDB91DA009AD482 /* LEOAssistiveTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA46D3D1BDB91DA009AD482 /* LEOAssistiveTouch.m */; settings = {ASSET_TAGS = (); }; };
+		0DA46D451BDB91DA009AD482 /* LEOAssistiveWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA46D3F1BDB91DA009AD482 /* LEOAssistiveWindow.m */; settings = {ASSET_TAGS = (); }; };
+		0DA46D461BDB91DA009AD482 /* LEOAssistiveWindowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA46D411BDB91DA009AD482 /* LEOAssistiveWindowItem.m */; settings = {ASSET_TAGS = (); }; };
+		0DA46D471BDB91DA009AD482 /* LEOAssistiveWindowMainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA46D431BDB91DA009AD482 /* LEOAssistiveWindowMainItem.m */; settings = {ASSET_TAGS = (); }; };
+		F74AD1D11BD7442B00305177 /* UIView+LEOExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F74AD1D01BD7442B00305177 /* UIView+LEOExtension.m */; };
+		F77E35A31BD79CF7003323B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F77E35A21BD79CF7003323B4 /* Images.xcassets */; };
+		F7E220CB1BD5EA14000E9026 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E220CA1BD5EA14000E9026 /* main.m */; };
+		F7E220CE1BD5EA14000E9026 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E220CD1BD5EA14000E9026 /* AppDelegate.m */; };
+		F7E220D61BD5EA14000E9026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E220D51BD5EA14000E9026 /* Assets.xcassets */; };
+		F7E220EF1BD5EA14000E9026 /* AssistiveTouchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E220EE1BD5EA14000E9026 /* AssistiveTouchUITests.m */; };
+		F7E220FE1BD5EA90000E9026 /* LEOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E220FD1BD5EA90000E9026 /* LEOViewController.m */; };
+		F7E221031BD5EF6E000E9026 /* HMYAssistiveLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E221001BD5EF6E000E9026 /* HMYAssistiveLog.m */; };
+		F7E221041BD5EF6E000E9026 /* HMYAssistiveControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E221021BD5EF6E000E9026 /* HMYAssistiveControl.m */; };
+		F7E2210D1BD60D93000E9026 /* LEOAssistiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E2210C1BD60D93000E9026 /* LEOAssistiveViewController.m */; };
+		F7E221101BD61168000E9026 /* LEONextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E2210F1BD61168000E9026 /* LEONextViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7E220E01BD5EA14000E9026 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7E220BE1BD5EA14000E9026 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7E220C51BD5EA14000E9026;
+			remoteInfo = AssistiveTouch;
+		};
+		F7E220EB1BD5EA14000E9026 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7E220BE1BD5EA14000E9026 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7E220C51BD5EA14000E9026;
+			remoteInfo = AssistiveTouch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DA46D3C1BDB91DA009AD482 /* LEOAssistiveTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOAssistiveTouch.h; sourceTree = "<group>"; };
+		0DA46D3D1BDB91DA009AD482 /* LEOAssistiveTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOAssistiveTouch.m; sourceTree = "<group>"; };
+		0DA46D3E1BDB91DA009AD482 /* LEOAssistiveWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOAssistiveWindow.h; sourceTree = "<group>"; };
+		0DA46D3F1BDB91DA009AD482 /* LEOAssistiveWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOAssistiveWindow.m; sourceTree = "<group>"; };
+		0DA46D401BDB91DA009AD482 /* LEOAssistiveWindowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOAssistiveWindowItem.h; sourceTree = "<group>"; };
+		0DA46D411BDB91DA009AD482 /* LEOAssistiveWindowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOAssistiveWindowItem.m; sourceTree = "<group>"; };
+		0DA46D421BDB91DA009AD482 /* LEOAssistiveWindowMainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOAssistiveWindowMainItem.h; sourceTree = "<group>"; };
+		0DA46D431BDB91DA009AD482 /* LEOAssistiveWindowMainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOAssistiveWindowMainItem.m; sourceTree = "<group>"; };
+		F74AD1CF1BD7442B00305177 /* UIView+LEOExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LEOExtension.h"; sourceTree = "<group>"; };
+		F74AD1D01BD7442B00305177 /* UIView+LEOExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LEOExtension.m"; sourceTree = "<group>"; };
+		F77E35A21BD79CF7003323B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F7E220C61BD5EA14000E9026 /* AssistiveTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssistiveTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E220CA1BD5EA14000E9026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7E220CC1BD5EA14000E9026 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7E220CD1BD5EA14000E9026 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7E220D51BD5EA14000E9026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7E220DA1BD5EA14000E9026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7E220DF1BD5EA14000E9026 /* AssistiveTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssistiveTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E220EA1BD5EA14000E9026 /* AssistiveTouchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssistiveTouchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E220EE1BD5EA14000E9026 /* AssistiveTouchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssistiveTouchUITests.m; sourceTree = "<group>"; };
+		F7E220F01BD5EA14000E9026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7E220FC1BD5EA90000E9026 /* LEOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOViewController.h; sourceTree = "<group>"; };
+		F7E220FD1BD5EA90000E9026 /* LEOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOViewController.m; sourceTree = "<group>"; };
+		F7E220FF1BD5EF6E000E9026 /* HMYAssistiveLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HMYAssistiveLog.h; path = ../AssistiveTouch/HMYAssistiveLog.h; sourceTree = "<group>"; };
+		F7E221001BD5EF6E000E9026 /* HMYAssistiveLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HMYAssistiveLog.m; path = ../AssistiveTouch/HMYAssistiveLog.m; sourceTree = "<group>"; };
+		F7E221011BD5EF6E000E9026 /* HMYAssistiveControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HMYAssistiveControl.h; path = ../AssistiveTouch/HMYAssistiveControl.h; sourceTree = "<group>"; };
+		F7E221021BD5EF6E000E9026 /* HMYAssistiveControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HMYAssistiveControl.m; path = ../AssistiveTouch/HMYAssistiveControl.m; sourceTree = "<group>"; };
+		F7E2210B1BD60D93000E9026 /* LEOAssistiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOAssistiveViewController.h; sourceTree = "<group>"; };
+		F7E2210C1BD60D93000E9026 /* LEOAssistiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOAssistiveViewController.m; sourceTree = "<group>"; };
+		F7E2210E1BD61168000E9026 /* LEONextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEONextViewController.h; sourceTree = "<group>"; };
+		F7E2210F1BD61168000E9026 /* LEONextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEONextViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7E220C31BD5EA14000E9026 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E220DC1BD5EA14000E9026 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E220E71BD5EA14000E9026 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DA46D3B1BDB91DA009AD482 /* AssistiveView */ = {
+			isa = PBXGroup;
+			children = (
+				0DA46D3C1BDB91DA009AD482 /* LEOAssistiveTouch.h */,
+				0DA46D3D1BDB91DA009AD482 /* LEOAssistiveTouch.m */,
+				0DA46D3E1BDB91DA009AD482 /* LEOAssistiveWindow.h */,
+				0DA46D3F1BDB91DA009AD482 /* LEOAssistiveWindow.m */,
+				0DA46D401BDB91DA009AD482 /* LEOAssistiveWindowItem.h */,
+				0DA46D411BDB91DA009AD482 /* LEOAssistiveWindowItem.m */,
+				0DA46D421BDB91DA009AD482 /* LEOAssistiveWindowMainItem.h */,
+				0DA46D431BDB91DA009AD482 /* LEOAssistiveWindowMainItem.m */,
+			);
+			path = AssistiveView;
+			sourceTree = "<group>";
+		};
+		F7E220BD1BD5EA14000E9026 = {
+			isa = PBXGroup;
+			children = (
+				F7E220C81BD5EA14000E9026 /* AssistiveTouch */,
+				F7E220ED1BD5EA14000E9026 /* AssistiveTouchUITests */,
+				F7E220C71BD5EA14000E9026 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7E220C71BD5EA14000E9026 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7E220C61BD5EA14000E9026 /* AssistiveTouch.app */,
+				F7E220DF1BD5EA14000E9026 /* AssistiveTouchTests.xctest */,
+				F7E220EA1BD5EA14000E9026 /* AssistiveTouchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7E220C81BD5EA14000E9026 /* AssistiveTouch */ = {
+			isa = PBXGroup;
+			children = (
+				0DA46D3B1BDB91DA009AD482 /* AssistiveView */,
+				F7E220CC1BD5EA14000E9026 /* AppDelegate.h */,
+				F7E220CD1BD5EA14000E9026 /* AppDelegate.m */,
+				F7E220FC1BD5EA90000E9026 /* LEOViewController.h */,
+				F7E220FD1BD5EA90000E9026 /* LEOViewController.m */,
+				F7E2210B1BD60D93000E9026 /* LEOAssistiveViewController.h */,
+				F7E2210C1BD60D93000E9026 /* LEOAssistiveViewController.m */,
+				F7E2210E1BD61168000E9026 /* LEONextViewController.h */,
+				F7E2210F1BD61168000E9026 /* LEONextViewController.m */,
+				F74AD1CF1BD7442B00305177 /* UIView+LEOExtension.h */,
+				F74AD1D01BD7442B00305177 /* UIView+LEOExtension.m */,
+				F77E35A21BD79CF7003323B4 /* Images.xcassets */,
+				F7E220C91BD5EA14000E9026 /* Supporting Files */,
+			);
+			path = AssistiveTouch;
+			sourceTree = "<group>";
+		};
+		F7E220C91BD5EA14000E9026 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7E220D51BD5EA14000E9026 /* Assets.xcassets */,
+				F7E220DA1BD5EA14000E9026 /* Info.plist */,
+				F7E220CA1BD5EA14000E9026 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7E220ED1BD5EA14000E9026 /* AssistiveTouchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F7E220FF1BD5EF6E000E9026 /* HMYAssistiveLog.h */,
+				F7E221001BD5EF6E000E9026 /* HMYAssistiveLog.m */,
+				F7E221011BD5EF6E000E9026 /* HMYAssistiveControl.h */,
+				F7E221021BD5EF6E000E9026 /* HMYAssistiveControl.m */,
+				F7E220EE1BD5EA14000E9026 /* AssistiveTouchUITests.m */,
+				F7E220F01BD5EA14000E9026 /* Info.plist */,
+			);
+			path = AssistiveTouchUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7E220C51BD5EA14000E9026 /* AssistiveTouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7E220F31BD5EA14000E9026 /* Build configuration list for PBXNativeTarget "AssistiveTouch" */;
+			buildPhases = (
+				F7E220C21BD5EA14000E9026 /* Sources */,
+				F7E220C31BD5EA14000E9026 /* Frameworks */,
+				F7E220C41BD5EA14000E9026 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AssistiveTouch;
+			productName = AssistiveTouch;
+			productReference = F7E220C61BD5EA14000E9026 /* AssistiveTouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7E220DE1BD5EA14000E9026 /* AssistiveTouchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7E220F61BD5EA14000E9026 /* Build configuration list for PBXNativeTarget "AssistiveTouchTests" */;
+			buildPhases = (
+				F7E220DB1BD5EA14000E9026 /* Sources */,
+				F7E220DC1BD5EA14000E9026 /* Frameworks */,
+				F7E220DD1BD5EA14000E9026 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7E220E11BD5EA14000E9026 /* PBXTargetDependency */,
+			);
+			name = AssistiveTouchTests;
+			productName = AssistiveTouchTests;
+			productReference = F7E220DF1BD5EA14000E9026 /* AssistiveTouchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F7E220E91BD5EA14000E9026 /* AssistiveTouchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7E220F91BD5EA14000E9026 /* Build configuration list for PBXNativeTarget "AssistiveTouchUITests" */;
+			buildPhases = (
+				F7E220E61BD5EA14000E9026 /* Sources */,
+				F7E220E71BD5EA14000E9026 /* Frameworks */,
+				F7E220E81BD5EA14000E9026 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7E220EC1BD5EA14000E9026 /* PBXTargetDependency */,
+			);
+			name = AssistiveTouchUITests;
+			productName = AssistiveTouchUITests;
+			productReference = F7E220EA1BD5EA14000E9026 /* AssistiveTouchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7E220BE1BD5EA14000E9026 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LEO;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Leo;
+				TargetAttributes = {
+					F7E220C51BD5EA14000E9026 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					F7E220DE1BD5EA14000E9026 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = F7E220C51BD5EA14000E9026;
+					};
+					F7E220E91BD5EA14000E9026 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = F7E220C51BD5EA14000E9026;
+					};
+				};
+			};
+			buildConfigurationList = F7E220C11BD5EA14000E9026 /* Build configuration list for PBXProject "AssistiveTouch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7E220BD1BD5EA14000E9026;
+			productRefGroup = F7E220C71BD5EA14000E9026 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7E220C51BD5EA14000E9026 /* AssistiveTouch */,
+				F7E220DE1BD5EA14000E9026 /* AssistiveTouchTests */,
+				F7E220E91BD5EA14000E9026 /* AssistiveTouchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7E220C41BD5EA14000E9026 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F77E35A31BD79CF7003323B4 /* Images.xcassets in Resources */,
+				F7E220D61BD5EA14000E9026 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E220DD1BD5EA14000E9026 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E220E81BD5EA14000E9026 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7E220C21BD5EA14000E9026 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E221101BD61168000E9026 /* LEONextViewController.m in Sources */,
+				F7E220CE1BD5EA14000E9026 /* AppDelegate.m in Sources */,
+				0DA46D471BDB91DA009AD482 /* LEOAssistiveWindowMainItem.m in Sources */,
+				0DA46D461BDB91DA009AD482 /* LEOAssistiveWindowItem.m in Sources */,
+				0DA46D451BDB91DA009AD482 /* LEOAssistiveWindow.m in Sources */,
+				F7E220CB1BD5EA14000E9026 /* main.m in Sources */,
+				F7E220FE1BD5EA90000E9026 /* LEOViewController.m in Sources */,
+				F7E221041BD5EF6E000E9026 /* HMYAssistiveControl.m in Sources */,
+				F7E221031BD5EF6E000E9026 /* HMYAssistiveLog.m in Sources */,
+				0DA46D441BDB91DA009AD482 /* LEOAssistiveTouch.m in Sources */,
+				F74AD1D11BD7442B00305177 /* UIView+LEOExtension.m in Sources */,
+				F7E2210D1BD60D93000E9026 /* LEOAssistiveViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E220DB1BD5EA14000E9026 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E220E61BD5EA14000E9026 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E220EF1BD5EA14000E9026 /* AssistiveTouchUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7E220E11BD5EA14000E9026 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7E220C51BD5EA14000E9026 /* AssistiveTouch */;
+			targetProxy = F7E220E01BD5EA14000E9026 /* PBXContainerItemProxy */;
+		};
+		F7E220EC1BD5EA14000E9026 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7E220C51BD5EA14000E9026 /* AssistiveTouch */;
+			targetProxy = F7E220EB1BD5EA14000E9026 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F7E220F11BD5EA14000E9026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F7E220F21BD5EA14000E9026 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7E220F41BD5EA14000E9026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				INFOPLIST_FILE = AssistiveTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-objc";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ninegame.gamemanager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7E220F51BD5EA14000E9026 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				INFOPLIST_FILE = AssistiveTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-objc";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ninegame.gamemanager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F7E220F71BD5EA14000E9026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AssistiveTouchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ninegame.gamemanager.AssistiveTouchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AssistiveTouch.app/AssistiveTouch";
+			};
+			name = Debug;
+		};
+		F7E220F81BD5EA14000E9026 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AssistiveTouchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ninegame.gamemanager.AssistiveTouchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AssistiveTouch.app/AssistiveTouch";
+			};
+			name = Release;
+		};
+		F7E220FA1BD5EA14000E9026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AssistiveTouchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ninegame.gamemanager.AssistiveTouchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AssistiveTouch;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F7E220FB1BD5EA14000E9026 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AssistiveTouchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ninegame.gamemanager.AssistiveTouchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AssistiveTouch;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7E220C11BD5EA14000E9026 /* Build configuration list for PBXProject "AssistiveTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E220F11BD5EA14000E9026 /* Debug */,
+				F7E220F21BD5EA14000E9026 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7E220F31BD5EA14000E9026 /* Build configuration list for PBXNativeTarget "AssistiveTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E220F41BD5EA14000E9026 /* Debug */,
+				F7E220F51BD5EA14000E9026 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7E220F61BD5EA14000E9026 /* Build configuration list for PBXNativeTarget "AssistiveTouchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E220F71BD5EA14000E9026 /* Debug */,
+				F7E220F81BD5EA14000E9026 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7E220F91BD5EA14000E9026 /* Build configuration list for PBXNativeTarget "AssistiveTouchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E220FA1BD5EA14000E9026 /* Debug */,
+				F7E220FB1BD5EA14000E9026 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7E220BE1BD5EA14000E9026 /* Project object */;
+}
