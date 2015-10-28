@@ -39,10 +39,10 @@ typedef NS_OPTIONS(NSInteger, AssistiveWindowEdge) {
 
 -(void)assistiveWindowDidDisAppear:(LEOAssistiveWindow *)window;
 
-
 -(void)assistiveWindow:(LEOAssistiveWindow *)window itemEventAtIndex:(NSInteger)index;
 
 -(void)assistiveWindowMainButtonEvent:(LEOAssistiveWindow *)window ;
+
 -(void)assistiveWindowNotTouchInTimer:(LEOAssistiveWindow *)window;
 
 @end
@@ -70,6 +70,7 @@ typedef NS_OPTIONS(NSInteger, AssistiveWindowEdge) {
 
 
 -(void)open;
+
 
 -(void)close;
 

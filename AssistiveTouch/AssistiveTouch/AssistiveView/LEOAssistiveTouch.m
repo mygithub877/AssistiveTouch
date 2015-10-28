@@ -76,8 +76,8 @@
         
         _currentScreenBounds=[UIScreen mainScreen].bounds;
         
-        _panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGesture:)];
-        [_window addGestureRecognizer:_panGesture];
+//        _panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGesture:)];
+//        [_window addGestureRecognizer:_panGesture];
         
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(deviceOrientationChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
 
@@ -88,10 +88,7 @@
 -(void)assistiveWindowNotTouchInTimer:(LEOAssistiveWindow *)window{
     if (window.select) {
         window.select=NO;
-        [window close];
-        _currentWindowFrame=window.frame;
-        [_window addGestureRecognizer:_panGesture];
-        window.mainButton.borderImageView.image=[UIImage imageNamed:@"entrance_logo_press"];
+        [self closeWindow];
     }else{
         if (window.windowEdge!=AssistiveWindowEdgeNone){
             CGRect frame=window.frame;
@@ -144,35 +141,47 @@
         } completion:^(BOOL finished) {
             window.windowEdge=AssistiveWindowEdgeNone;
             window.select=YES;
-            [_window removeGestureRecognizer:_panGesture];
             [window open];
-            _currentWindowFrame=window.frame;
-            if (window.direction==DragWindowDirectionRight) {
-                window.mainButton.borderImageView.image=[UIImage imageNamed:@"entrance_logo_triangle"];
-            }else if (window.direction==DragWindowDirectionLeft){
-                window.mainButton.borderImageView.image=[UIImage imageNamed:@"entrance_logo_left"];
-            }
+//            _currentWindowFrame=window.frame;
+//            if (window.direction==DragWindowDirectionRight) {
+//                window.mainButton.borderImageView.image=[UIImage imageNamed:@"entrance_logo_triangle"];
+//            }else if (window.direction==DragWindowDirectionLeft){
+//                window.mainButton.borderImageView.image=[UIImage imageNamed:@"entrance_logo_left"];
+//            }
         }];
         return;
     }
     _window.select=!_window.select;
     if (_window.select) {
-        //[_window removeGestureRecognizer:_panGesture];
         [window open];
-        _currentWindowFrame=window.frame;
-        if (window.direction==DragWindowDirectionRight) {
-            window.mainButton.borderImageView.image=[UIImage imageNamed:@"entrance_logo_triangle"];
-        }else if (window.direction==DragWindowDirectionLeft){
-            window.mainButton.borderImageView.image=[UIImage imageNamed:@"entrance_logo_left"];
-        }
     }else{
-       // [_window addGestureRecognizer:_panGesture];
-        [window close];
-        _currentWindowFrame=window.frame;
-        window.mainButton.borderImageView.image=[UIImage imageNamed:@"entrance_logo_press"];
+        [self closeWindow];
 
     }
 
+}
+-(void)assistiveWindowWillAppear:(LEOAssistiveWindow *)window{
+
+}
+-(void)assistiveWindowDidAppear:(LEOAssistiveWindow *)window{
+    _currentWindowFrame=window.frame;
+    if (window.direction==DragWindowDirectionRight) {
+        window.mainButton.borderImageView.image=[UIImage imageNamed:@"entrance_logo_triangle"];
+    }else if (window.direction==DragWindowDirectionLeft){
+        window.mainButton.borderImageView.image=[UIImage imageNamed:@"entrance_logo_left"];
+    }
+
+}
+
+-(void)assistiveWindowWillDisAppear:(LEOAssistiveWindow *)window{
+}
+-(void)assistiveWindowDidDisAppear:(LEOAssistiveWindow *)window{
+    _currentWindowFrame=window.frame;
+
+}
+-(void)closeWindow{
+    [_window close];
+    _currentWindowFrame=_window.frame;
 }
 #pragma mark - pan
 - (void)panGesture:(UIPanGestureRecognizer *)pan
@@ -184,9 +193,7 @@
     }
     if (_window.select) {
         _window.select=NO;
-        [_window close];
-        _currentWindowFrame=_window.frame;
-        _window.mainButton.borderImageView.image=[UIImage imageNamed:@"entrance_logo_press"];
+        [self closeWindow];
     }
 
     NSLog(@"触摸点 = %@",NSStringFromCGPoint(currentP));

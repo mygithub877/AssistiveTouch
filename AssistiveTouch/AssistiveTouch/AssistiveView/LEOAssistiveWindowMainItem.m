@@ -28,12 +28,18 @@
     }
     return self;
 }
+-(void)setHighlighted:(BOOL)highlighted{
+    [super setHighlighted:highlighted];
+    if (highlighted) {
+        _borderImageView.image=[UIImage imageNamed:@"entrance_logo_press"];
+    }else{
+        _borderImageView.image=nil;
+
+    }
+}
 -(void)layoutSubviews{
     [super layoutSubviews];
     _borderImageView.frame=self.bounds;
-    if (self.selected==NO) {
-        _borderImageView.image=[UIImage imageNamed:@"entrance_logo_press"];
-    }
 }
 -(CGRect)imageRectForContentRect:(CGRect)contentRect{
     return CGRectMake(contentRect.origin.x+2, contentRect.origin.y+2, contentRect.size.width-4, contentRect.size.height-4);
