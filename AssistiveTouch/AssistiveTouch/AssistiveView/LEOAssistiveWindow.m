@@ -21,6 +21,7 @@
     CGPoint _startPoint;
     
     BOOL _isMove;
+    CGRect _windowOldFrame;
 }
 
 @end
@@ -106,11 +107,20 @@
     _mainButton=mainButton;
     [self addSubview:mainButton];
 }
+-(void)setIsCloseWindowAllEvent:(BOOL)isCloseWindowAllEvent{
+    _isCloseWindowAllEvent=isCloseWindowAllEvent;
+    if (!isCloseWindowAllEvent) {
+        _lastEventTimeStamp=[[NSDate date] timeIntervalSince1970];
+    }
+}
 /**
  按钮重新布局
  */
 -(void)layoutSubviews{
     [super layoutSubviews];
+    if (_isCloseWindowAllEvent) {
+        return;
+    }
     if (_direction==DragWindowDirectionLeft) {
         
         [_mainButton setFrame:CGRectMake(self.frame.size.width-kDragMainItemWidth, self.frame.size.height/2-kDragMainItemWidth/2, kDragMainItemWidth, kDragMainItemWidth)];
@@ -148,6 +158,9 @@
 #pragma mark - NSTimer Event
 -(void)checkWindowEvent:(NSTimer *)timer{
     NSLog(@"%d",1);
+    if (_isCloseWindowAllEvent) {
+        return;
+    }
     if (self.select) {
         if ((long)([[NSDate date] timeIntervalSince1970]-_lastEventTimeStamp)==5) {
             /**
@@ -193,12 +206,21 @@
 
 -(void)sendEvent:(UIEvent *)event{
     [super sendEvent:event];
+    if (_isCloseWindowAllEvent) {
+        return;
+    }
+
     if (self.alpha!=1) {
         self.alpha=1;
     }
     _lastEventTimeStamp=[[NSDate date] timeIntervalSince1970];
 }
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    if (_isCloseWindowAllEvent) {
+        [super touchesBegan:touches withEvent:event];
+        return;
+    }
+
     NSLog(@"touches---began");
     _isMove=NO;
     UITouch *touch = [touches anyObject];
@@ -222,6 +244,11 @@
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    if (_isCloseWindowAllEvent) {
+        [super touchesMoved:touches withEvent:event];
+        return;
+    }
+
     NSLog(@"touches---moved");
     CGPoint point = [[touches anyObject] locationInView:self];
 
@@ -292,6 +319,10 @@
     
 }
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    if (_isCloseWindowAllEvent) {
+        [super touchesEnded:touches withEvent:event];
+        return;
+    }
     NSLog(@"touches---ended");
     //如果是移动完则不走delegate
     if (_isMove) {
@@ -327,6 +358,11 @@
     
 }
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
+    if (_isCloseWindowAllEvent) {
+        [super touchesCancelled:touches withEvent:event];
+        return;
+    }
+
     NSLog(@"touches---cancel");
 
     UITouch *touch = [touches anyObject];
@@ -454,8 +490,13 @@
     _startPoint=CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
 }
 
-
-
+-(void)fullScreen{
+    _windowOldFrame=self.frame;
+    self.frame=[UIScreen mainScreen].bounds;
+}
+-(void)revert{
+    self.frame=_windowOldFrame;
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

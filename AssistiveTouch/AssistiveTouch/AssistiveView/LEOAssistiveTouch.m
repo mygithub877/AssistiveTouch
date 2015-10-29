@@ -18,7 +18,7 @@
 #import "LEOAssistiveWindowItem.h"
 #import "LEOAssistiveWindowMainItem.h"
 
-
+#import "LEONextViewController.h"
 #pragma mark - LEOAssistiveTouch
 @interface LEOAssistiveTouch ()<LEOAssistiveWindowDelegate>
 {
@@ -49,6 +49,17 @@
          */
         _window = [[LEOAssistiveWindow alloc]init];
         _window.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height/2, kDragMainItemWidth, kDragWindowHeight);
+        if (_window.frame.origin.x<=0) {
+            _window.windowEdge=AssistiveWindowEdgeLeft;
+        }else if (_window.frame.origin.x>=[UIScreen mainScreen].bounds.size.width-_window.frame.size.width){
+            _window.windowEdge=AssistiveWindowEdgeRight;
+        }else if (_window.frame.origin.y<=0){
+            _window.windowEdge=AssistiveWindowEdgeTop;
+        }else if (_window.frame.origin.y >=[UIScreen mainScreen].bounds.size.height-_window.frame.size.height){
+            _window.windowEdge=AssistiveWindowEdgeBottom;
+        }else{
+            _window.windowEdge=AssistiveWindowEdgeNone;
+        }
         _currentWindowFrame=_window.frame;
         _window.windowLevel = UIWindowLevelAlert;
         _window.backgroundColor = [UIColor clearColor];
@@ -148,13 +159,18 @@
  */
 -(void)assistiveWindow:(LEOAssistiveWindow *)window itemEventAtIndex:(NSInteger)index{
         NSLog(@"index------%d",(int)index);
-//    window.frame=[UIScreen mainScreen].bounds;
-//    
-//    UIViewController *root=window.rootViewController;
-//    UIViewController *vc=[[UIViewController alloc] init];
-//    vc.view.backgroundColor=[UIColor yellowColor];
-//    [root presentViewController:vc animated:YES completion:nil];
-//    
+    [window setIsCloseWindowAllEvent:YES];
+    [window fullScreen];
+    
+    UIViewController *root=window.rootViewController;
+    LEONextViewController *vc=[[LEONextViewController alloc] init];
+    vc.callback=^{
+        [window revert];
+        window.isCloseWindowAllEvent=NO;
+    };
+    //vc.view.backgroundColor=[UIColor yellowColor];
+    [root presentViewController:vc animated:YES completion:nil];
+    
 }
 /**
  window 主按钮 点击event delegate

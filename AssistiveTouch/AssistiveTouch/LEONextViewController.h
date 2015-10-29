@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LEONextViewController : UIViewController
-
+@property (nonatomic, copy)void (^callback)();
 @end

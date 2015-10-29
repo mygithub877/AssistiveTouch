@@ -97,7 +97,11 @@ typedef NS_OPTIONS(NSInteger, AssistiveWindowEdge) {
 
 
 @property (nonatomic, strong) LEOAssistiveWindowMainItem *mainButton;
-
+/**
+ 在弹出控制器时一定要设置为yes 重要的事情说三遍
+ 在关闭控制器是一定要设置为no
+ */
+@property (nonatomic, assign) BOOL isCloseWindowAllEvent;
 
 -(void)open;
 
@@ -106,6 +110,13 @@ typedef NS_OPTIONS(NSInteger, AssistiveWindowEdge) {
 
 -(void)addButtonItem:(UIButton *)btn;
 
-
+/**
+ 在弹出控制器之前一定要掉 重要的事情说三遍
+ */
+-(void)fullScreen;
+/**
+ 在控制器关闭之前一定要掉 重要的事情说三遍
+ */
+-(void)revert;
 
 @end
