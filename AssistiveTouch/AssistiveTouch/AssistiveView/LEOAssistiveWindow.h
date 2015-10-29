@@ -8,41 +8,77 @@
 
 #import <UIKit/UIKit.h>
 #import "LEOAssistiveWindowMainItem.h"
+/**
+ window 高
+ */
 static  CGFloat const kDragWindowHeight  =70.f;
+/**
+ window 主按钮宽高
+ */
 static  CGFloat const kDragMainItemWidth =60;
+/**
+ 子按钮宽
+ */
 static  CGFloat const kDragSubItemWidth  =60;//40.f;
+/**
+ 字按钮间距
+ */
 static  CGFloat const kDragItemMarginWidth  =0.f;
-static  CGFloat const kDragWindowMinScreenMargin  =25.f;
+/**
+ 贴边隐藏显示出来的宽
+ */
+static  CGFloat const kDragWindowMinScreenMargin  =35.f;
 
-
+/**
+ window打开时的方向
+ */
 typedef NS_OPTIONS(NSInteger, DragWindowDirection) {
-    DragWindowDirectionNone,
-    DragWindowDirectionLeft,
-    DragWindowDirectionRight,
+    DragWindowDirectionNone,    //关闭没打开
+    DragWindowDirectionLeft,    //左
+    DragWindowDirectionRight,   //右
 };
+/**
+ 贴边时屏幕边框方向
+ */
 typedef NS_OPTIONS(NSInteger, AssistiveWindowEdge) {
-    AssistiveWindowEdgeNone,
-    AssistiveWindowEdgeBottom,
-    AssistiveWindowEdgeTop,
-    AssistiveWindowEdgeLeft,
-    AssistiveWindowEdgeRight
+    AssistiveWindowEdgeNone =0, //没有贴边
+    AssistiveWindowEdgeBottom,  //底部
+    AssistiveWindowEdgeTop,     //顶部
+    AssistiveWindowEdgeLeft,    //左
+    AssistiveWindowEdgeRight    //右
 };
 @class  LEOAssistiveWindow;
+
 @protocol LEOAssistiveWindowDelegate <NSObject>
 
 @optional
+/**
+ 将要出现
+ */
 -(void)assistiveWindowWillAppear:(LEOAssistiveWindow *)window;
-
+/**
+ 完成出现
+ */
 -(void)assistiveWindowDidAppear:(LEOAssistiveWindow *)window;
-
+/**
+ 将要关闭
+ */
 -(void)assistiveWindowWillDisAppear:(LEOAssistiveWindow *)window;
-
+/**
+ 完成关闭
+ */
 -(void)assistiveWindowDidDisAppear:(LEOAssistiveWindow *)window;
-
+/**
+ 字按钮点击
+ */
 -(void)assistiveWindow:(LEOAssistiveWindow *)window itemEventAtIndex:(NSInteger)index;
-
+/**
+ 主按钮点击
+ */
 -(void)assistiveWindowMainButtonEvent:(LEOAssistiveWindow *)window ;
-
+/**
+ 5s时间
+ */
 -(void)assistiveWindowNotTouchInTimer:(LEOAssistiveWindow *)window;
 
 @end
@@ -60,12 +96,6 @@ typedef NS_OPTIONS(NSInteger, AssistiveWindowEdge) {
 @property (nonatomic, strong, readonly) NSArray *items;
 
 
-/**
- 设置小虫子图片 设置button的select和normal状态的图片即可,
- close->normal
- open->select
- 如果设置open下方向图片 在代理里面设置
- */
 @property (nonatomic, strong) LEOAssistiveWindowMainItem *mainButton;
 
 

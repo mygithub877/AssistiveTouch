@@ -23,20 +23,6 @@
     }
     return self;
 }
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        _titleBgImageView=[[UIImageView alloc] init];
-        _titleBgImageView.layer.cornerRadius=3.f;
-        _titleBgImageView.layer.masksToBounds=YES;
-        UIImage *oimage=[UIImage imageNamed:@"entrance_btn_typeface_bg"];
-        UIImage *image=[oimage stretchableImageWithLeftCapWidth:oimage.size.width/2 topCapHeight:oimage.size.height/2];
-        _titleBgImageView.image=image;
-        [self addSubview:_titleBgImageView];
-    }
-    return self;
-}
 
 -(void)layoutSubviews{
     [super layoutSubviews];

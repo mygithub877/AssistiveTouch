@@ -19,15 +19,6 @@
     }
     return self;
 }
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        _borderImageView=[[UIImageView alloc] init];
-        [self addSubview:_borderImageView];
-    }
-    return self;
-}
 -(void)setHighlighted:(BOOL)highlighted{
     [super setHighlighted:highlighted];
     if (highlighted) {
