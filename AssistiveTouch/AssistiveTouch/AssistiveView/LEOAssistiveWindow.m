@@ -490,13 +490,13 @@
     _startPoint=CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
 }
 
--(void)fullScreen{
-    _windowOldFrame=self.frame;
-    self.frame=[UIScreen mainScreen].bounds;
-}
--(void)revert{
-    self.frame=_windowOldFrame;
-}
+//-(void)fullScreen{
+//    _windowOldFrame=self.frame;
+//    self.frame=[UIScreen mainScreen].bounds;
+//}
+//-(void)revert{
+//    self.frame=_windowOldFrame;
+//}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

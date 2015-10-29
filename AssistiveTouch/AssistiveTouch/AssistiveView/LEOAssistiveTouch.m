@@ -25,6 +25,7 @@
     LEOAssistiveWindow *_window;//悬浮window
     CGRect _currentWindowFrame;//当window静止状态(没有frame变化)时飞frame
     CGRect _currentScreenBounds;//旋转屏幕时上一个屏幕的bounds
+    UIWindow *_controllerWindow;
 }
 @end
 
@@ -67,6 +68,12 @@
         _window.clipsToBounds=YES;
         _window.assistiveDelegate=self;
         _window.rootViewController = [[LEOAssistiveViewController alloc] init];
+        
+        _controllerWindow=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _controllerWindow.windowLevel=UIWindowLevelAlert+1;
+        _controllerWindow.backgroundColor=[UIColor clearColor];
+        _controllerWindow.rootViewController=[[UIViewController alloc] init];
+        
         /**
          window主按钮
          */
@@ -159,16 +166,13 @@
  */
 -(void)assistiveWindow:(LEOAssistiveWindow *)window itemEventAtIndex:(NSInteger)index{
         NSLog(@"index------%d",(int)index);
-    [window setIsCloseWindowAllEvent:YES];
-    [window fullScreen];
     
-    UIViewController *root=window.rootViewController;
+    _controllerWindow.hidden=NO;
+    UIViewController *root=_controllerWindow.rootViewController;
     LEONextViewController *vc=[[LEONextViewController alloc] init];
     vc.callback=^{
-        [window revert];
-        window.isCloseWindowAllEvent=NO;
+        _controllerWindow.hidden=YES;
     };
-    //vc.view.backgroundColor=[UIColor yellowColor];
     [root presentViewController:vc animated:YES completion:nil];
     
 }

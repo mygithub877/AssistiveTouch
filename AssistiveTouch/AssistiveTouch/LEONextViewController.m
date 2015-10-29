@@ -31,10 +31,11 @@
 
 - (void)dismis
 {
-    if (self.callback) {
-        self.callback();
-    }
     [self  dismissViewControllerAnimated:YES completion:^{
+        if (self.callback) {
+            self.callback();
+        }
+
     }];
 }
 

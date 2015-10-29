@@ -110,13 +110,13 @@ typedef NS_OPTIONS(NSInteger, AssistiveWindowEdge) {
 
 -(void)addButtonItem:(UIButton *)btn;
 
-/**
- 在弹出控制器之前一定要掉 重要的事情说三遍
- */
--(void)fullScreen;
-/**
- 在控制器关闭之前一定要掉 重要的事情说三遍
- */
--(void)revert;
-
+///**
+// 在弹出控制器之前一定要掉 重要的事情说三遍
+// */
+//-(void)fullScreen;
+///**
+// 在控制器关闭之前一定要掉 重要的事情说三遍
+// */
+//-(void)revert;
+//
 @end
